@@ -1,0 +1,5 @@
+---
+- name: clean ansible tmp directory
+  file:
+    path: "{{ common_tmp }}"
+    state: absent

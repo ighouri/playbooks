@@ -1,0 +1,9 @@
+---
+ - name: download java rpm
+   get_url:
+     url: "{{ java_download_url }}"
+     dest: "{{ common_downloads }}"
+
+ - name: install java rpm
+   yum:
+     name: "{{ common_downloads }}/{{ java_package_name }}"

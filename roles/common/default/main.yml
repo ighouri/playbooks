@@ -1,0 +1,3 @@
+
+common_tmp: /tmp/ansible-tmp
+common_download: /tmp/ansible-downloads

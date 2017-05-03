@@ -1,0 +1,19 @@
+---
+ - name: cleap up existing ansible tmp directory
+   file:
+     path: "{{ common_tmp }}"
+     state: absent
+
+ - name: create ansible tmp directory
+   file:
+     path: "{{ common_tmp }}"
+     mode: "1777"
+     state: directory
+   notify:
+     - clean ansible tmp directory
+
+ - name: create ansible downloads directory
+   file:
+     path: "{{ common_download }}"
+     mode: "1777"
+     state: directory

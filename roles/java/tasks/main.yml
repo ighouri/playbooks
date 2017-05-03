@@ -1,0 +1,9 @@
+---
+- name: Install Java
+  include: install.yml
+  when: java_task == True
+
+- name: exporting JAVA_HOME
+  template:
+    src: java.sh
+    dest: /etc/profile.d/java.sh

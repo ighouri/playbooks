@@ -1,0 +1,11 @@
+
+java_task: True
+java_package_source: http://repos.walmart.com/mirrored-assets/java/jdk/
+java_version: 8u131
+java_build: b11
+java_version_token: d54c1d3a095b4ff2b6607d096fa80163
+java_package_type: jdk # either jdk or jre
+java_arch: linux-x64
+java_package_name: "{{ java_package_type }}-{{ java_version }}-{{ java_arch }}.rpm"
+java_download_url: "{{ java_package_source }}/{{ java_version }}-{{ java_build }}/{{ java_version_token }}/{{ java_package_name }}"
+java_home: "/usr/java/{{ java_package_type }}1.8.0_131"
